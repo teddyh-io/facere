@@ -49,11 +49,12 @@
     <style>
       :host {
         --app-toolbar-height: 40px;
-        --light-green: #2fbea5;
+        --black-1: #2D2A29;
         --medium-green: #009688;
-        --dark-green: #263238;
+		--dark-green: #263238;
+        --gradient: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%;
         --light-gray: #ECECEC;
-        --paper-dialog-button-color: var(--medium-green);
+        --paper-dialog-button-color: var(--black-1);
         --app-drawer-width: 280px;
         display: flex;
         flex-direction: column;
@@ -74,7 +75,7 @@
         height: var(--app-toolbar-height);
         color: #fff;
         padding: 8px;
-        background: var(--dark-green);
+        background: var(--gradient);
         text-align: center;
         display: flex;
         justify-content: space-between;
@@ -117,7 +118,7 @@
         cursor: pointer;
         font-size: 16px;
         --paper-item-selected: {
-          color: var(--medium-green);
+          color: var(--black-1);
           background-color: var(--light-gray);
           font-weight: normal;
         }
@@ -125,7 +126,7 @@
 
       #drawer-nav paper-icon-item:focus::before,
       #drawer-nav paper-icon-item:focus::after {
-        color: var(--medium-green);
+        color: var(--black-1);
         background-color: var(--light-gray);
       }
       /* rtl:end:ignore */
@@ -136,7 +137,7 @@
       }
 
       #logo-nav {
-        background-color: var(--dark-green);
+        background-color: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
         text-align: center;
         height: 120px;
       }
@@ -192,7 +193,7 @@
       }
 
       paper-toast paper-button {
-        color: var(--light-green);
+        color: var(--black-1);
         text-align: center;
       }
 
@@ -312,7 +313,7 @@
           <iron-icon icon="cancel" slot="item-icon"></iron-icon>
           [[localize('quit')]]
         </paper-icon-item>
-         <paper-item class="border-top">
+        <paper-item class="border-top">
           <a href="https://getfacere.com/privacy">[[localize('privacy')]]</a>
         </paper-item>
         <paper-item>
